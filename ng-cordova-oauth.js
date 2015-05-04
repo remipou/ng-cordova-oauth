@@ -245,7 +245,7 @@
                 var deferred = $q.defer();
                 if(window.cordova) {
                     var cordovaMetadata = cordova.require("cordova/plugin_list").metadata;
-                    if(cordovaMetadata.hasOwnProperty("org.apache.cordova.inappbrowser") === true) {
+                    if(cordovaMetadata.hasOwnProperty("cordova-plugin-inappbrowser") === true) {
                         var browserRef = window.open('https://github.com/login/oauth/authorize?client_id=' + clientId + '&redirect_uri=http://localhost/callback&scope=' + appScope.join(","), '_blank', 'location=no,clearsessioncache=yes,clearcache=yes');
                         browserRef.addEventListener('loadstart', function(event) {
                             if((event.url).indexOf("http://localhost/callback") === 0) {
